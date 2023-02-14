@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import apiProjects from "../api/projects";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Form() {
   // useEffect(() => {
@@ -39,15 +40,8 @@ export default function Form() {
   console.log(formik);
   return (
     <div className="flex flex-col m-10 ">
-      <button
-        onClick={() => {
-          navigate("/dashboard");
-        }}
-      >
-        button
-      </button>
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title">Project Title:</label>
         <input
           className="block mb-5"
           id="title"
@@ -59,7 +53,7 @@ export default function Form() {
         {formik.errors.title && formik.touched.title ? (
           <p className="text-red-500">{formik.errors.title}</p>
         ) : null}
-        <label htmlFor="description">Description</label>
+        <label htmlFor="description">Description:</label>
         <textarea
           className="block mb-5"
           id="description"
@@ -72,10 +66,19 @@ export default function Form() {
           <p className="text-red-500">{formik.errors.description}</p>
         ) : null}
         <button
+          onClick={() => {}}
           type="submit"
           className=" bg-blue-600 text-white rounded-lg text-xs p-2"
         >
           Create a Project
+        </button>
+        <button
+          className=" bg-blue-600 text-white rounded-lg text-xs p-2 mx-8"
+          onClick={() => {
+            navigate("/dashboard");
+          }}
+        >
+          Go Back
         </button>
       </form>
     </div>

@@ -20,16 +20,15 @@ export default function Dashboard() {
   }, []);
   return (
     <div>
-      <div className="m-8  border-b-2 border-blue-500 p-2">
-        <section className="  font-bold text-3xl ">Dashboard</section>{" "}
+      <div className=" m-12 mx-28  border-b-2 border-blue-500 p-2">
+        <section className="font-bold text-3xl">Dashboard</section>
       </div>
-
       <div className="flex items-center ">
         <Link to={`/projects/create`}>
           <button
             className=" border hover:bg-black
              hover:text-white rounded-lg
-           text-xs p-2 m-6"
+           text-xs p-2 m-6 mx-28  "
           >
             + Create New Project
           </button>
@@ -49,46 +48,46 @@ export default function Dashboard() {
           search
         </button>
       </div>
-      <div className="flex">
+      <div className="flex mx-28  ">
         <div class="flex flex-col cursor-pointer">
-          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <table class="min-w-full">
+          <div class="overflow-x-auto sm:-mx-8 lg:-mx-8">
+            <div class="py-4 inline-block min-w-full sm:px-8 lg:px-8">
+              <table>
                 <thead class="bg-white border-b">
                   <tr>
                     <th
                       scope="col"
-                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      class="text-sm font-medium text-gray-900 px-10 py-4 text-left"
                     >
                       #
                     </th>
                     <th
                       scope="col"
-                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      class="text-sm font-medium text-gray-900 px-10 py-4 text-left"
                     >
                       Project Name
                     </th>
                     <th
                       scope="col"
-                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      class="text-sm font-medium text-gray-900 px-10 py-4 text-left"
                     >
                       Description
                     </th>
                     <th
                       scope="col"
-                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      class="text-sm font-medium text-gray-900 px-10 py-4 text-left"
                     >
                       Status
                     </th>
                     <th
                       scope="col"
-                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      class="text-sm font-medium text-gray-900 px-10 py-4 text-left"
                     >
                       Date
                     </th>
                     <th
                       scope="col"
-                      class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      class="text-sm font-medium text-gray-900 px-10 py-4 text-left"
                     >
                       Action
                     </th>
@@ -100,7 +99,7 @@ export default function Dashboard() {
                       key={projectID}
                       class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100"
                     >
-                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <td class="px-6 py-4 text-sm font-medium text-gray-900">
                         {project.id}
                       </td>
                       <Link to={`/projects/1`}>

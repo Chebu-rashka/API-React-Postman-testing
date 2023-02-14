@@ -52,14 +52,9 @@ const DataProvider = (props) => {
           comment: "bla bla",
         },
         {
-          title: "4deh",
-          cards: [
-            "Coding assessments",
-            "Usability Testing",
-            "Deploy code to production",
-          ],
+          title: "In review",
+          cards: ["Debugging", "User Testing", "Final reviews"],
           status: ["Stuck", "In process", "Completed"],
-          comment: "bla bla",
         },
       ],
       // cards: ["Task 1", "Task 2", "Task 3"],

@@ -6,17 +6,17 @@ const db = new sqlite3.Database("./trellodata.db");
 const dayjs = require("dayjs");
 const port = "5000";
 
-db.serialize(function () {
-  db.run(
-    "CREATE TABLE projects (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, createdAt TEXT, status TEXT)"
-  );
-  db.run(
-    "CREATE TABLE boards (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, projectId INT)"
-  );
-  db.run(
-    "CREATE TABLE cards (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, boardId INT)"
-  );
-});
+// db.serialize(function () {
+//   db.run(
+//     "CREATE TABLE projects (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, createdAt TEXT, status TEXT)"
+//   );
+//   db.run(
+//     "CREATE TABLE boards (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, projectId INT)"
+//   );
+//   db.run(
+//     "CREATE TABLE cards (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, boardId INT)"
+//   );
+// });
 
 const app = express();
 
